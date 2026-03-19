@@ -1,5 +1,7 @@
 # captcha
 
+[한국어](./README_ko.md)
+
 `captcha` is a reusable Codex skill for storing repository-specific "do-not-repeat" rules in a single file and reusing them before future work.
 
 ## What It Does
@@ -27,7 +29,13 @@ It helps the agent stay aligned with repository-specific expectations without re
 
 ## Installation
 
-Place the skill in your shared skills directory or workspace skill collection:
+Install from GitHub with `skills.sh`:
+
+```bash
+npx skills add https://github.com/yxxnpyo/captcha
+```
+
+If you are developing locally or copying files manually, place the skill in your shared skills directory or workspace skill collection:
 
 ```text
 skills/
@@ -113,7 +121,7 @@ It is designed for fast scanning by agents:
 - short rule fields
 - compact `avoid` / `do` structure
 
-See [`references/captcha-format.md`](/Users/hongyp/Desktop/codex/harnes/skills/captcha/references/captcha-format.md) for the exact format.
+See [`references/captcha-format.md`](./references/captcha-format.md) for the exact format.
 
 ## Effect
 
@@ -126,4 +134,3 @@ In practice, it helps reduce:
 - verification omissions
 - risky or unapproved actions
 - repeated user corrections on the same repository
-# captcha

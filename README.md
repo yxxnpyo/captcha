@@ -1,5 +1,7 @@
 # memento
 
+![memento banner](./assets/readme_banner.png)
+
 [Korean README / 한국어 버전 README](./README_ko.md)
 
 `memento` is a reusable Codex skill for storing repository-specific "do-not-repeat" rules in a single file and reusing them before future work.
@@ -32,7 +34,7 @@ It helps the agent stay aligned with repository-specific expectations without re
 Install from GitHub with `skills.sh`:
 
 ```bash
-npx skills add https://github.com/yxxnpyo/memento
+npx skills add yxxnpyo/Memento
 ```
 
 If you are developing locally or copying files manually, place the skill in your shared skills directory or workspace skill collection:

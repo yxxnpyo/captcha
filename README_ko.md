@@ -1,5 +1,7 @@
 # memento
 
+![memento banner](./assets/readme_banner.png)
+
 [English README / 영어 버전 README](./README.md)
 
 `memento`는 레포지토리마다 "다시는 반복하지 말아야 할 규칙"을 한 파일에 모아두고, 다음 작업 전에 다시 확인하게 해주는 Codex용 재사용 스킬입니다.
@@ -32,7 +34,7 @@
 `skills.sh`를 쓰면 GitHub에서 바로 설치할 수 있습니다.
 
 ```bash
-npx skills add https://github.com/yxxnpyo/memento
+npx skills add yxxnpyo/Memento
 ```
 
 로컬에서 직접 복사해 쓸 때는 공용 스킬 디렉터리나 워크스페이스 스킬 컬렉션에 아래 구조로 두면 됩니다.

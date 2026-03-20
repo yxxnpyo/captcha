@@ -1,5 +1,6 @@
 ---
 name: memento
+version: "0.0.1"
 description: Save repository-specific "do-not-repeat" rules when the user says things like "메멘토에 저장해놔", "memento 저장", "다음부터 이건 하지 않게 기록해", "save this to memento", "remember this rule", "don't do this again", or "add this to the repo memento". Also use this skill before planning, editing, or verifying work whenever the target repository already contains `memento/MEMENTO.md`.
 ---
 

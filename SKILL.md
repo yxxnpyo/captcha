@@ -1,36 +1,36 @@
 ---
-name: captcha
-description: Save repository-specific "do-not-repeat" rules when the user says things like "캡차에 저장해놔", "captcha 저장", "다음부터 이건 하지 않게 기록해", "save this to captcha", "remember this rule", "don't do this again", or "add this to the repo captcha". Also use this skill before planning, editing, or verifying work whenever the target repository already contains `captcha/CAPTCHA.md`.
+name: memento
+description: Save repository-specific "do-not-repeat" rules when the user says things like "메멘토에 저장해놔", "memento 저장", "다음부터 이건 하지 않게 기록해", "save this to memento", "remember this rule", "don't do this again", or "add this to the repo memento". Also use this skill before planning, editing, or verifying work whenever the target repository already contains `memento/MEMENTO.md`.
 ---
 
-# Captcha
+# Memento
 
 ## Purpose
 
-Use `captcha` to maintain a repository-specific rulebook of things the agent should not repeat.
+Use `memento` to maintain a repository-specific rulebook of things the agent should not repeat.
 
 These are not long notes, general preferences, or postmortems. Store only reusable rules that should change future behavior in the current repository.
 
 ## Use This Skill When
 
-Use `captcha` in either of these situations:
+Use `memento` in either of these situations:
 
 1. The user asks to save a mistake, exclusion, or "don't do this again" rule.
-2. The target repository already contains `captcha/CAPTCHA.md` and you are about to plan, edit, or verify work.
+2. The target repository already contains `memento/MEMENTO.md` and you are about to plan, edit, or verify work.
 
 Common trigger phrases include:
 
-- `캡차에 저장해놔`
-- `captcha 저장`
+- `메멘토에 저장해놔`
+- `memento 저장`
 - `다음부터 이건 하지 않게 기록해`
-- `save this to captcha`
+- `save this to memento`
 - `remember this rule`
 - `don't do this again`
-- `add this to the repo captcha`
+- `add this to the repo memento`
 
 ## Core Guardrails
 
-- Keep all repository rules in one file only: `captcha/CAPTCHA.md`
+- Keep all repository rules in one file only: `memento/MEMENTO.md`
 - Never split categories into multiple Markdown files
 - Categorize automatically; do not make the user manage categories
 - Prefer merging into an existing rule over creating a near-duplicate
@@ -42,14 +42,14 @@ Common trigger phrases include:
 
 Before planning or editing:
 
-1. Check whether `captcha/CAPTCHA.md` exists in the target repository.
+1. Check whether `memento/MEMENTO.md` exists in the target repository.
 2. Always read the `Global` section.
-3. Use the `Category Index` in `captcha/CAPTCHA.md` to choose task-relevant categories.
+3. Use the `Category Index` in `memento/MEMENTO.md` to choose task-relevant categories.
 4. Read only the matched sections before continuing.
 5. If the task expands into a new area, read more sections before proceeding.
 6. For broad refactors, migrations, or cross-cutting tasks, read the whole file.
 
-If `captcha/CAPTCHA.md` does not exist, continue normally unless the user explicitly asks you to save a rule.
+If `memento/MEMENTO.md` does not exist, continue normally unless the user explicitly asks you to save a rule.
 
 ## Save Workflow
 
@@ -61,9 +61,9 @@ When the user asks to save something:
    - `avoid`: what not to do
    - `do`: what to do instead
 4. Choose the best category automatically.
-5. If `captcha/CAPTCHA.md` does not exist:
-   - create `captcha/`
-   - initialize `captcha/CAPTCHA.md` using `assets/CAPTCHA.template.md`
+5. If `memento/MEMENTO.md` does not exist:
+   - create `memento/`
+   - initialize `memento/MEMENTO.md` using `assets/MEMENTO.template.md`
 6. Search for an existing rule with the same meaning.
 7. If a matching rule exists, merge into it.
 8. Otherwise append a new rule to the selected category.
@@ -154,6 +154,6 @@ Create a new rule only when merging would make the existing rule too broad or in
 
 ## File Format
 
-Follow `references/captcha-format.md` for the exact `captcha/CAPTCHA.md` structure.
+Follow `references/memento-format.md` for the exact `memento/MEMENTO.md` structure.
 
-If you need to initialize a new file, use `assets/CAPTCHA.template.md` as the starting structure.
+If you need to initialize a new file, use `assets/MEMENTO.template.md` as the starting structure.

@@ -1,19 +1,17 @@
-# captcha
-
-![captcha banner](./assets/banner.png)
+# memento
 
 [English README / 영어 버전 README](./README.md)
 
-`captcha`는 레포지토리마다 "다시는 반복하지 말아야 할 규칙"을 한 파일에 모아두고, 다음 작업 전에 다시 확인하게 해주는 Codex용 재사용 스킬입니다.
+`memento`는 레포지토리마다 "다시는 반복하지 말아야 할 규칙"을 한 파일에 모아두고, 다음 작업 전에 다시 확인하게 해주는 Codex용 재사용 스킬입니다.
 
 ## 하는 일
 
-사용자가 `캡차에 저장해놔`, `captcha 저장`, `다음부터 이건 하지 않게 기록해`, `이 레포에서는 이 규칙 기억해`처럼 말하면, 이 스킬은:
+사용자가 `메멘토에 저장해놔`, `memento 저장`, `다음부터 이건 하지 않게 기록해`, `이 레포에서는 이 규칙 기억해`처럼 말하면, 이 스킬은:
 
 1. 최근 작업 맥락을 확인합니다.
 2. 무엇을 반복하면 안 되는지 추출합니다.
 3. 이를 재사용 가능한 규칙으로 정리합니다.
-4. 해당 레포의 `captcha/CAPTCHA.md`에 저장합니다.
+4. 해당 레포의 `memento/MEMENTO.md`에 저장합니다.
 
 그다음 같은 레포에서 에이전트가 계획을 세우거나 수정, 검증을 시작할 때 이 파일을 먼저 읽고 같은 실수를 되풀이하지 않도록 움직입니다.
 
@@ -34,28 +32,28 @@
 `skills.sh`를 쓰면 GitHub에서 바로 설치할 수 있습니다.
 
 ```bash
-npx skills add https://github.com/yxxnpyo/captcha
+npx skills add https://github.com/yxxnpyo/memento
 ```
 
 로컬에서 직접 복사해 쓸 때는 공용 스킬 디렉터리나 워크스페이스 스킬 컬렉션에 아래 구조로 두면 됩니다.
 
 ```text
 skills/
-  captcha/
+  memento/
     SKILL.md
     README.md
     README_ko.md
     references/
-      captcha-format.md
+      memento-format.md
     assets/
-      CAPTCHA.template.md
+      MEMENTO.template.md
 ```
 
 필수 파일:
 
 - `SKILL.md`
-- `references/captcha-format.md`
-- `assets/CAPTCHA.template.md`
+- `references/memento-format.md`
+- `assets/MEMENTO.template.md`
 
 ## 동작 방식
 
@@ -64,14 +62,14 @@ skills/
 사용자가 실수나 제외 규칙을 저장해 달라고 하면, 스킬은 다음 파일을 만들거나 업데이트합니다.
 
 ```text
-captcha/CAPTCHA.md
+memento/MEMENTO.md
 ```
 
 규칙은 이 파일 하나에만 저장합니다. 카테고리별로 Markdown 파일을 여러 개 만들지 않습니다.
 
 ### 2. 작업 전 조회
 
-레포에 `captcha/CAPTCHA.md`가 이미 있다면, 에이전트는:
+레포에 `memento/MEMENTO.md`가 이미 있다면, 에이전트는:
 
 - 항상 `Global` 섹션을 읽고
 - 일반 작업에서는 관련 카테고리만 읽고
@@ -94,8 +92,8 @@ captcha/CAPTCHA.md
 
 ## 대표 발화 예시
 
-- `캡차에 저장해놔`
-- `captcha 저장`
+- `메멘토에 저장해놔`
+- `memento 저장`
 - `다음부터 이건 하지 않게 기록해`
 - `이 레포에서는 이 규칙 기억해`
 
@@ -110,7 +108,7 @@ captcha/CAPTCHA.md
 레포 안에서 규칙 파일은 아래 경로에 놓입니다.
 
 ```text
-captcha/CAPTCHA.md
+memento/MEMENTO.md
 ```
 
 이 파일은 에이전트가 빠르게 훑어볼 수 있게 설계되어 있습니다.
@@ -120,11 +118,11 @@ captcha/CAPTCHA.md
 - 규칙 필드는 짧게 유지
 - `avoid` / `do` 구조로 요약
 
-정확한 포맷은 [`captcha-format.md`](./references/captcha-format.md)를 참고하면 됩니다.
+정확한 포맷은 [`memento-format.md`](./references/memento-format.md)를 참고하면 됩니다.
 
 ## 기대 효과
 
-`captcha`를 쓰면 레포지토리마다 쌓인 교훈이 다음 작업에도 이어져서 작업 일관성이 높아집니다.
+`memento`를 쓰면 레포지토리마다 쌓인 교훈이 다음 작업에도 이어져서 작업 일관성이 높아집니다.
 
 실제로는 아래 같은 문제를 줄이는 데 도움이 됩니다.
 

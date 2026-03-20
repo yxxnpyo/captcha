@@ -1,6 +1,6 @@
-# Captcha Format Reference
+# Memento Format Reference
 
-Use this reference only when you need the exact `captcha/CAPTCHA.md` structure, when you must initialize a new file, or when you need to repair an existing file that drifted from the standard layout.
+Use this reference only when you need the exact `memento/MEMENTO.md` structure, when you must initialize a new file, or when you need to repair an existing file that drifted from the standard layout.
 
 ## Section Order
 

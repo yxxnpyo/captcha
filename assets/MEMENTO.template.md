@@ -1,4 +1,4 @@
-# CAPTCHA
+# MEMENTO
 
 > Project-specific do-not-repeat rules for this repository.
 > Read `Global` and task-relevant categories before planning or editing.

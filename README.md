@@ -1,19 +1,17 @@
-# captcha
-
-![captcha banner](./assets/banner.png)
+# memento
 
 [Korean README / 한국어 버전 README](./README_ko.md)
 
-`captcha` is a reusable Codex skill for storing repository-specific "do-not-repeat" rules in a single file and reusing them before future work.
+`memento` is a reusable Codex skill for storing repository-specific "do-not-repeat" rules in a single file and reusing them before future work.
 
 ## What It Does
 
-When a user says things like `save this to captcha`, `remember this rule`, `don't do this again`, `add this to the repo captcha`, or asks the agent to remember a mistake, the skill:
+When a user says things like `save this to memento`, `remember this rule`, `don't do this again`, `add this to the repo memento`, or asks the agent to remember a mistake, the skill:
 
 1. Looks at the recent work context.
 2. Extracts what should not be repeated.
 3. Rewrites it as a reusable rule.
-4. Stores it in `captcha/CAPTCHA.md` inside the target repository.
+4. Stores it in `memento/MEMENTO.md` inside the target repository.
 
 Later, when the agent starts planning, editing, or verifying work in the same repository, it reads that rulebook first and avoids repeating the stored mistakes.
 
@@ -34,28 +32,28 @@ It helps the agent stay aligned with repository-specific expectations without re
 Install from GitHub with `skills.sh`:
 
 ```bash
-npx skills add https://github.com/yxxnpyo/captcha
+npx skills add https://github.com/yxxnpyo/memento
 ```
 
 If you are developing locally or copying files manually, place the skill in your shared skills directory or workspace skill collection:
 
 ```text
 skills/
-  captcha/
+  memento/
     SKILL.md
     README.md
     README_ko.md
     references/
-      captcha-format.md
+      memento-format.md
     assets/
-      CAPTCHA.template.md
+      MEMENTO.template.md
 ```
 
 Required files:
 
 - `SKILL.md`
-- `references/captcha-format.md`
-- `assets/CAPTCHA.template.md`
+- `references/memento-format.md`
+- `assets/MEMENTO.template.md`
 
 ## How It Works
 
@@ -64,14 +62,14 @@ Required files:
 When the user asks to save a mistake or exclusion, the skill creates or updates:
 
 ```text
-captcha/CAPTCHA.md
+memento/MEMENTO.md
 ```
 
 Rules are stored in one file only. The skill does not create one file per category.
 
 ### 2. Reading before work
 
-If `captcha/CAPTCHA.md` already exists in a repository, the agent:
+If `memento/MEMENTO.md` already exists in a repository, the agent:
 
 - always reads `Global`
 - reads only task-relevant categories for normal work
@@ -94,11 +92,11 @@ If a similar rule already exists, the skill updates the existing rule instead of
 
 ## Typical User Phrases
 
-- `save this to captcha`
+- `save this to memento`
 - `remember this rule`
 - `don't do this again`
-- `add this to the repo captcha`
-- `keep this in captcha`
+- `add this to the repo memento`
+- `keep this in memento`
 - `store this as a repo rule`
 - `remember this for future work`
 
@@ -113,7 +111,7 @@ The last option is always a free-form answer so the user can type the exact rule
 The repository-local rulebook lives at:
 
 ```text
-captcha/CAPTCHA.md
+memento/MEMENTO.md
 ```
 
 It is designed for fast scanning by agents:
@@ -123,11 +121,11 @@ It is designed for fast scanning by agents:
 - short rule fields
 - compact `avoid` / `do` structure
 
-See [`references/captcha-format.md`](./references/captcha-format.md) for the exact format.
+See [`references/memento-format.md`](./references/memento-format.md) for the exact format.
 
 ## Effect
 
-Using `captcha` improves consistency over time by making repository-specific lessons persistent and reusable.
+Using `memento` improves consistency over time by making repository-specific lessons persistent and reusable.
 
 In practice, it helps reduce:
 
